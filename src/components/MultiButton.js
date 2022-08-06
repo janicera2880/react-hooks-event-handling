@@ -6,10 +6,11 @@ function MultiButton() {
   }
 
   return (
+    //provide a function definition, not a function invocation to our event handlers
     <div>
-      <button onClick={handleClick}>Button 1</button>
-      <button onClick={handleClick}>Button 2</button>
-      <button onClick={handleClick}>Button 3</button>
+      <button onClick={() => handleClick(1)}>Button 1</button>
+      <button onClick={() => handleClick(2)}>Button 2</button>
+      <button onClick={() => handleClick(3)}>Button 3</button>
     </div>
   );
 }
